@@ -14,4 +14,4 @@
 3. Alcance a linha de chegada e vença o desafio!
 
 Aproveite para testar suas habilidades matemáticas de forma divertida e interativa!
-Api disponível no link:
+Api disponível no link: https://mourapontes.github.io/CarMath/
