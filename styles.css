@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Necessário para as mensagens caírem */
+}
+
+header {
+    background-color: #6c63ff;
+    color: white;
+    padding: 10px;
+}
+
+main {
+    margin: 20px;
+}
+
+.question {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.level-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.level-buttons button:nth-child(1) {
+    background-color: #4caf50;
+}
+
+.level-buttons button:nth-child(2) {
+    background-color: #ff9800;
+}
+
+.level-buttons button:nth-child(3) {
+    background-color: #f44336;
+}
+
+.level-buttons button:hover {
+    opacity: 0.8;
+}
+
+.input-area input {
+    font-size: 1rem;
+    padding: 5px;
+    width: 100px;
+    margin-right: 10px;
+}
+
+.input-area button {
+    font-size: 1rem;
+    padding: 5px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #6c63ff;
+    color: white;
+}
+
+.input-area button:hover {
+    background-color: #534bb1;
+}
+
+.result {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+.race-track {
+    margin: 30px auto;
+    width: 90%;
+    position: relative;
+    height: 50px;
+    background: linear-gradient(90deg, #ffeb3b 90%, #f44336 90%);
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+.car {
+    position: absolute;
+    top: 5px;
+    right: 90%;
+    font-size: 2rem;
+    transition: right 0.5s ease-in-out;
+}
+
+.congratulations {
+    color: #4caf50;
+    margin: 20px;
+}
+
+.falling-messages div {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fall 3s linear infinite;
+    font-size: 1.5rem;
+    color: #ff4081;
+}
+
+@keyframes fall {
+    0% {
+        top: -50px;
+    }
+    100% {
+        top: 100vh;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .question {
+        font-size: 1.2rem;
+    }
+
+    .input-area input {
+        width: 80px;
+    }
+
+    .input-area button {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    .car {
+        font-size: 1.5rem;
+    }
+
+    .level-buttons button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
