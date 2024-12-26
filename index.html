@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Matemática</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CarMath: A Corrida dos Números</h1>
+        <h1>By Rangel Pontes</h1>
+    </header>
+    <main>
+        <div class="level-buttons">
+            <button onclick="startGame('facil')">Fácil</button>
+            <button onclick="startGame('medio')">Médio</button>
+            <button onclick="startGame('dificil')">Difícil</button>
+        </div>
+
+        <div class="game-area" style="display: none;">
+            <div class="question" id="question"></div>
+            <div class="input-area">
+                <input type="number" id="answer" placeholder="Digite sua resposta">
+                <button id="submit-btn">Enviar</button>
+            </div>
+            <div class="result" id="result"></div>
+            <div class="race-track">
+                <div class="car" id="car">🚗</div>
+                <div class="finish-line" id="finish-line">🏁</div>
+            </div>
+        </div>
+
+        <div class="congratulations" id="congratulations" style="display: none;">
+            <h2>Parabéns! Você completou o desafio com sucesso!</h2>
+            <p>Obrigado por jogar!</p>
+            <button onclick="resetGame()">Reiniciar Jogo</button>
+        </div>
+
+        <div class="falling-messages" id="falling-messages" style="display: none;"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
