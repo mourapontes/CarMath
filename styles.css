@@ -11,6 +11,7 @@ header {
     background-color: #6c63ff;
     color: white;
     padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 main {
@@ -30,6 +31,8 @@ main {
     border: none;
     border-radius: 5px;
     color: white;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .level-buttons button:nth-child(1) {
@@ -45,7 +48,9 @@ main {
 }
 
 .level-buttons button:hover {
-    opacity: 0.8;
+    opacity: 0.9;
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .input-area input {
@@ -53,6 +58,14 @@ main {
     padding: 5px;
     width: 100px;
     margin-right: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.input-area input:focus {
+    border-color: #6c63ff;
+    outline: none;
 }
 
 .input-area button {
@@ -63,10 +76,13 @@ main {
     border-radius: 5px;
     background-color: #6c63ff;
     color: white;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .input-area button:hover {
     background-color: #534bb1;
+    transform: scale(1.05);
 }
 
 .result {
@@ -82,6 +98,7 @@ main {
     height: 50px;
     background: linear-gradient(90deg, #ffeb3b 90%, #f44336 90%);
     border: 2px solid #000;
+    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -93,11 +110,26 @@ main {
     transition: right 0.5s ease-in-out;
 }
 
+.car:hover {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 .congratulations {
     color: #4caf50;
     margin: 20px;
+    font-weight: bold;
 }
 
+/* Adicionando efeito de letras caindo em verde e amarelo */
 .falling-messages div {
     position: absolute;
     top: -50px;
@@ -105,15 +137,24 @@ main {
     transform: translateX(-50%);
     animation: fall 3s linear infinite;
     font-size: 1.5rem;
-    color: #ff4081;
+    color: green;
+    text-shadow: 2px 2px yellow;
 }
 
 @keyframes fall {
     0% {
         top: -50px;
+        color: green;
+        text-shadow: 2px 2px yellow;
+    }
+    50% {
+        color: yellow;
+        text-shadow: 2px 2px green;
     }
     100% {
         top: 100vh;
+        color: green;
+        text-shadow: 2px 2px yellow;
     }
 }
 
